@@ -1,0 +1,14 @@
+.main {
+    display: grid;
+    place-items: center;
+    padding: 6rem;
+    height: 100vh;
+}
+
+.centerText {
+    text-align: center;
+}
+
+@media screen AND (max-width:895px) AND (orientation:portrait) {
+    .main { height:100vw; }
+}

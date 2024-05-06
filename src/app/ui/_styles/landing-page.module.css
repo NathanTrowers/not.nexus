@@ -1,0 +1,101 @@
+.main { 
+  background: url(/landing-page-background.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+  padding: 0;
+  row-gap: 0.5em;
+}
+
+.tempLogo {
+  grid-column: 4 / span 3;
+  grid-row: 1;
+  text-align: end;
+  align-content: center;
+  font-size: 2em;
+  height: 4rem;
+  background-image: var(--black-gradient);
+  color: var(--accent-colour);
+}
+
+.heading  {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  align-content: center;
+  background-image: var(--primary-colour-gradient);
+}
+
+.topButton {
+  grid-column: 5;
+  grid-row: 10;
+  text-decoration: none;
+  animation-delay: 0.5s;
+}
+
+.middleArea {
+  grid-column: 5;
+  grid-row: 11;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  animation-delay: 0.7s;
+}
+
+.invisible {
+  display: none;
+}
+
+.martialArtsArea {
+  grid-column: 5;
+  grid-row: 12;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  animation-delay: 0.9s;
+}
+
+.contactButton {
+  grid-column: 1;
+  grid-row: 12;
+  animation-delay: 0.3s;
+}
+
+.lockedButton:hover::before {
+  opacity: 0;
+}
+.lockedButton, .lockedButton:hover, .lockedButton:focus {
+  align-items: center;
+  display: flex;
+  width: 11.9em;
+  height: 3em;
+  padding: 1em;
+  background-color: #9b9999bd;
+  background-image: none;
+  color: #4d4c4cbd;
+  border: none;
+}
+
+.logo {
+  margin-right: 1em;
+}
+
+.darkBackground { background-color: var(--accent-colour-dark); }
+
+@media screen AND (max-width: 895px) AND (orientation: portrait) {
+  .main { height:100vw; }
+  .tempLogo { height: 2.4rem; }
+  .topButton { grid-row: 4;}
+  .middleArea { grid-row: 5;}
+  .martialArtsArea { grid-row: 6;}
+  .contactButton { grid-row: 6;}
+}
+
+@media screen AND (max-width: 895px) AND (orientation: landscape) {
+  .tempLogo, .heading { height: 2.4rem; }
+  .topButton { grid-row: 4;}
+  .middleArea { grid-row: 5;}
+  .martialArtsArea { grid-row: 6;}
+  .contactButton { grid-row: 6;}
+}

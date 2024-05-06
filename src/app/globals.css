@@ -1,107 +1,96 @@
 :root {
   --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --primary-colour: #071e85;
+  --secondary-colour: #ff0000;
+  --accent-colour: #9678a7bd;
+  --accent-colour-dark: #775f85bd;
+  --black: #000000;
+  --white: #ffffff;
+  --secondary-colour-dark: #3f0909;
+  --primary-colour-gradient: linear-gradient(to right, #071e85ff, #8b9ffa8f, #8b9ffa11);
+  --secondary-colour-gradient: linear-gradient(to right, #861037d3, #ff0000c7, #e75050b4, #ff0000c7, #861037d3, #ff0000c7, #e75050b4);
+  --grey-colour-gradient: linear-gradient(to right, #969696d3, #cececec7, #ffffffb4, #cececec7, #969696d3, #cececec7, #ffffffb4);
+  --black-gradient: linear-gradient(to left, #000000ff, #4d4d4d01);
+  
+  font-size: 1.3rem; /** 24px **/
+  background-color: var(--black);
+  color: var(--white);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-html,
-body {
-  max-width: 100vw;
+html, body {
+  width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes sideScroll {
+  0% { background-position: 90% 0; }
+  100% { background-position: 0 0; }
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+button::before, a::before {
+  content: '';
+  background-image: var(--secondary-colour-gradient);
+  position: absolute;
+  top: -0.0625em;
+  left: -0.0625em;
+  background-size: 400%;
+  opacity: 0;
+  z-index: -1;
+  width: calc(100% + 0.125em);
+  height: calc(100% + 0.125em);
+  animation: sideScroll 14s linear infinite;
 }
+a::before { background-image: var(--grey-colour-gradient); }
+button:hover::before, button:focus::before,
+          a:hover::before, a:focus::before {
+  opacity: 1;
+}
+button, a {
+  display: flex;
+  align-items: center;
+  width: 13em;
+  height: 3em;
+  padding: 1em;
+  font-size: 1em;
+  border: none;
+  background-color: var(--accent-colour);
+  color: var(--white);
+  backdrop-filter: blur(0.5em);
+}
+button:hover, button:focus, a:hover, a:focus {
+  border-left: 2px solid #ff4242;
+  background: transparent;
+}
+a:hover, a:focus {  border-left: 2px solid var(--white); }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 20px);
   }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.fadeIn { animation: appear 0.6s ease-out 1 backwards; }
+.fadeOut { animation: appear 0.6s ease-out 1 reverse forwards; }
+
+@media screen AND (max-width:895px) AND (orientation:portrait) {
+  html {
+    transform: rotate(90deg);
+    transform-origin: right top;
+    width: 100vh;
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+
+  body { width: 100vh; }
 }

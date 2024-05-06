@@ -5,7 +5,7 @@ describe('Landing Page', () => {
     cy.visit('/');
   });
 
-  it('loads landing page then shows contact buttons then returns to the previous view', () => {
+  it('loads landing page, then shows contact buttons, then returns to the previous view', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
@@ -26,7 +26,7 @@ describe('Landing Page', () => {
     cy.contains('Contact');
   });
 
-  it('loads landing page then shows software engineering buttons then returns to the previous view', () => {
+  it('loads landing page, then shows software engineering buttons, then returns to the previous view', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
@@ -47,7 +47,7 @@ describe('Landing Page', () => {
     cy.contains('Contact');
   });
 
-  it('loads landing page then shows contact buttons then clicks on the GitHub link', () => {
+  it('loads landing page, then shows contact buttons, then clicks on the GitHub link', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
@@ -66,7 +66,7 @@ describe('Landing Page', () => {
     });
   });
 
-  it('loads landing page then shows contact buttons then clicks on the LinkedIn link', () => {
+  it('loads landing page, then shows contact buttons, then clicks on the LinkedIn link', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
@@ -86,7 +86,7 @@ describe('Landing Page', () => {
     });
   });
 
-  it('loads landing page then shows software engineering buttons then navigates to the Software Projects Page', () => {
+  it('loads landing page, then shows software engineering buttons, then navigates to the Software Projects Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
@@ -103,7 +103,7 @@ describe('Landing Page', () => {
     cy.contains('projects page');
   });
 
-  it('loads landing page then shows software engineering buttons then navigates to the Hire NOT Page', () => {
+  it('loads landing page, then shows software engineering buttons, then navigates to the Hire NOT Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');

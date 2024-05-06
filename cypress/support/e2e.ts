@@ -16,7 +16,6 @@
 // Import commands.js using ES2015 syntax:
 import 'cypress-axe';
 import './commands';
-import './terminalLog';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

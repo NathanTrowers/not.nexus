@@ -9,22 +9,24 @@
   row-gap: 0.5em;
 }
 
-.tempLogo {
+.heading {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  align-content: center;
+  padding-left: 0.5rem;
+  background-image: var(--primary-colour-gradient);
+}
+
+.brandLogo {
   grid-column: 4 / span 3;
   grid-row: 1;
   text-align: end;
   align-content: center;
   font-size: 2em;
   height: 4rem;
+  padding-right: 0.5rem;
   background-image: var(--black-gradient);
   color: var(--accent-colour);
-}
-
-.heading  {
-  grid-column: 1 / span 4;
-  grid-row: 1;
-  align-content: center;
-  background-image: var(--primary-colour-gradient);
 }
 
 .topButton {
@@ -43,9 +45,7 @@
   animation-delay: 0.7s;
 }
 
-.invisible {
-  display: none;
-}
+.invisible { display: none; }
 
 .martialArtsArea {
   grid-column: 5;
@@ -62,40 +62,109 @@
   animation-delay: 0.3s;
 }
 
-.lockedButton:hover::before {
-  opacity: 0;
-}
+.lockedButton:hover::before { opacity: 0; }
 .lockedButton, .lockedButton:hover, .lockedButton:focus {
   align-items: center;
   display: flex;
-  width: 11.9em;
+  width: 7.6em;
   height: 3em;
   padding: 1em;
-  background-color: #9b9999bd;
+  background-color: var(--grey-background);
   background-image: none;
-  color: #4d4c4cbd;
+  color: var(--grey-text);
   border: none;
 }
 
-.logo {
-  margin-right: 1em;
-}
+.logo { margin-right: 1em; }
 
 .darkBackground { background-color: var(--accent-colour-dark); }
 
-@media screen AND (max-width: 895px) AND (orientation: portrait) {
-  .main { height:100vw; }
-  .tempLogo { height: 2.4rem; }
-  .topButton { grid-row: 4;}
-  .middleArea { grid-row: 5;}
-  .martialArtsArea { grid-row: 6;}
-  .contactButton { grid-row: 6;}
+.footer {
+  grid-row: 17;
+  grid-column: 5 / span 2;
+  color: var(--black);
 }
 
-@media screen AND (max-width: 895px) AND (orientation: landscape) {
-  .tempLogo, .heading { height: 2.4rem; }
-  .topButton { grid-row: 4;}
-  .middleArea { grid-row: 5;}
-  .martialArtsArea { grid-row: 6;}
-  .contactButton { grid-row: 6;}
+@media screen AND (max-width: 360px) AND (orientation: portrait) {
+  .main { height:100vw; }
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 10; }
+}
+
+@media screen AND (min-width: 361px) AND (max-width: 375px) AND (orientation: portrait) {
+  .main { height:100vw; }
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 12; }
+}
+
+@media screen AND (min-width: 376px) AND (max-width: 390px) AND (orientation: portrait) {
+  .main { height:100vw; }
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 13; }
+}
+
+@media screen AND (min-width: 391px) AND (max-width: 430px) AND (orientation: portrait) {
+  .main { height:100vw; }
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 15; }
+}
+
+@media screen AND (min-width: 431px) AND (max-width: 915px) AND (not(width: 810px))AND (orientation: portrait) {
+  .footer { grid-row: 15; }
+}
+
+@media screen AND (min-width: 391px) AND (max-width: 854px) AND (orientation: portrait) {
+  .main { height:100vw; }
+}
+
+@media screen AND (max-height: 360px) AND (orientation: landscape) {
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 10; }
+}
+
+@media screen AND (min-height: 361px) AND (max-height: 375px) AND (orientation: landscape) {
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 12; }
+}
+
+@media screen AND (min-height: 391px) AND (max-height: 430px) AND (orientation: landscape) {
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 15; }
+}
+
+@media screen AND (min-height: 376px) AND (max-height: 390px) AND (orientation: landscape) {
+  .brandLogo { height: 2.4rem; }
+  .topButton { grid-row: 4; }
+  .middleArea { grid-row: 5; }
+  .martialArtsArea { grid-row: 6; }
+  .contactButton { grid-row: 6; }
+  .footer { grid-row: 13; }
 }

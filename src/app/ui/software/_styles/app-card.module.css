@@ -1,0 +1,44 @@
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    width: 20em;
+    margin: 0.6em;
+    padding: 0.5em;
+    background: var(--primary-colour-transparent);
+}
+
+.logo { margin-right: 1em; }
+
+.defaultMargin { margin: 0.5em; }
+
+.descriptionMargin { margin: 0 0.5em 0; }
+
+.longerButton {
+    width: auto;
+    text-decoration: none;
+}
+
+@media screen AND (max-width: 375px) AND (orientation: portrait) {
+    .card { font-size: 70%; }
+}
+
+@media screen AND (min-width: 376px) AND (max-width: 390px) AND (orientation: portrait) {
+    .card { font-size: 78%; }
+}
+
+@media screen AND (min-width: 391px) AND (max-width: 432px) AND (orientation: portrait) {
+    .card { font-size: 85%; }
+}
+
+@media screen AND (max-height: 375px) AND (orientation: landscape) {
+    .card { font-size: 70%; }
+}
+
+@media screen AND (min-height: 376px) AND (max-height: 390px) AND (orientation: landscape) {
+    .card { font-size: 78%; }
+}
+
+@media screen AND (min-height: 391px) AND (max-height: 432px) AND (orientation: landscape) {
+    .card { font-size: 85%; }
+}

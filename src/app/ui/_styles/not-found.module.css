@@ -9,6 +9,6 @@
     text-align: center;
 }
 
-@media screen AND (max-width:895px) AND (orientation:portrait) {
+@media screen AND (max-width:430px) AND (orientation:portrait) {
     .main { height:100vw; }
 }

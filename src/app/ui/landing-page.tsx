@@ -1,15 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 
+import NotBang from '@/app/ui/not-bang';
 import styles from '@/app/ui/_styles/landing-page.module.css';
 
 
-export function LandingPage() {
+export default function LandingPage() {
   const [mainViewClass, setMainViewClass] = useState('fadeIn');
   const [contactViewClass, setContactViewClass] = useState(`${styles.invisible}`);
-  const [softwareEngineeringClass, setSoftwareEngineeringClass] = useState(`${styles.invisible}`);
+  const [softwareEngineeringViewClass, setSoftwareEngineeringViewClass] = useState(`${styles.invisible}`);
   const [showContact, setShowContact] = useState(false);
   const [showSoftwareEngineering, setShowSoftwareEngineering] = useState(false);
 
@@ -28,7 +30,7 @@ export function LandingPage() {
 
   const onClickSoftwareEngineering = () => {
     setMainViewClass('fadeOut');
-    setSoftwareEngineeringClass('fadeIn');
+    setSoftwareEngineeringViewClass('fadeIn');
     
     setTimeout(
       () => {
@@ -54,7 +56,7 @@ export function LandingPage() {
 
   const onClickBackSoftwareEngineering = () => {
     setMainViewClass('fadeIn');
-    setSoftwareEngineeringClass('fadeOut');
+    setSoftwareEngineeringViewClass('fadeOut');
 
     setTimeout(
       () => {
@@ -70,21 +72,36 @@ export function LandingPage() {
       <>
         <h1 className={`${styles.heading} ${mainViewClass}`}>Main Menu</h1>
         <button 
-          className={`${styles.topButton} ${mainViewClass}`}
-          aria-live='polite'
-          onClick={onClickSoftwareEngineering}
+            className={`${styles.topButton} ${mainViewClass}`}
+            aria-live='polite'
+            onClick={onClickSoftwareEngineering}
         >Software Engineering</button>
         <span className={`${styles.middleArea} ${mainViewClass}`}>
-          🔒<button className={styles.lockedButton} disabled>Art</button>
+            <Image
+                width='112'
+                height='62'
+                src='/official-lock.svg'
+                alt=''
+            />
+            <button className={styles.lockedButton} disabled>Art</button>
         </span>
         <span className={`${styles.martialArtsArea} ${mainViewClass}`}>
-          🔒<button className={styles.lockedButton} disabled>Martial Arts</button>
+            <Image
+                width='112'
+                height='62'
+                src='/official-lock.svg'
+                alt=''
+            />
+            <button className={styles.lockedButton} disabled>Martial Arts</button>
         </span>
         <button 
-          className={`${styles.contactButton} ${mainViewClass}`}
-          aria-live='polite'
-          onClick={onClickContact}
+            className={`${styles.contactButton} ${mainViewClass}`}
+            aria-live='polite'
+            onClick={onClickContact}
         >Contact</button>
+        <footer className={`${styles.footer} ${mainViewClass}`}>
+          <p>NOT &copy; { new Date().getFullYear()}. All Rights Reserved.</p>
+        </footer>
       </>
     );
   }
@@ -135,25 +152,23 @@ export function LandingPage() {
   function SoftwareEngineeringSection() {
     return (
       <>
-        <h1 className={`${styles.heading} ${softwareEngineeringClass}`}>NOT: The Software Engineer</h1>
-        <a 
-          className={`${styles.topButton} ${softwareEngineeringClass}`}
-          aria-live='polite'
-          href='/software/projects'
-        >
-          Projects
-        </a>
-        <a 
-          className={`${styles.middleArea} ${softwareEngineeringClass} ${styles.darkBackground}`}
-          aria-live='polite'
-          href='/software/hire-not'
-        >
-          Hire NOT
-        </a>
+        <h1 className={`${styles.heading} ${softwareEngineeringViewClass}`}>
+          <NotBang />The Software Engineer
+        </h1>
+        <Link 
+            className={`${styles.topButton} ${softwareEngineeringViewClass}`}
+            aria-live='polite'
+            href='/software/projects'
+        >Projects</Link>
+        <Link
+            className={`${styles.middleArea} ${softwareEngineeringViewClass} ${styles.darkBackground}`}
+            aria-live='polite'
+            href='/software/hire-not'
+        >Hire NOT</Link>
         <button
-          className={`${styles.contactButton} ${softwareEngineeringClass}`}
-          aria-live='polite'
-          onClick={onClickBackSoftwareEngineering}
+            className={`${styles.contactButton} ${softwareEngineeringViewClass}`}
+            aria-live='polite'
+            onClick={onClickBackSoftwareEngineering}
         >Back</button>
       </>
     );
@@ -161,8 +176,19 @@ export function LandingPage() {
 
   return (
     <main className={styles.main}>
-      <header className={styles.tempLogo}>
-        <p>LOGO</p>
+      <header className={styles.brandLogo}>
+        <Image
+            src='/project_logos/official-not-logo.svg'
+            alt=''
+            sizes='100vw'
+            style={{
+              width: '25%',
+              height: '70%'
+            }}
+            width={166}
+            height={62}
+            priority
+        />
       </header>
       {!showContact && !showSoftwareEngineering && <MainSection />}
       {showContact && <ContactSection />}

@@ -1,0 +1,109 @@
+.main { 
+    background: url(/software-engineering-background.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    align-content: center;
+    width: 50vw;
+    padding-left: 0.5rem;
+    background-image: var(--primary-colour-gradient);
+}
+
+.brandLogo {
+    text-align: end;
+    align-content: center;
+    font-size: 2em;
+    height: 4rem;
+    width: 50vw;
+    padding-right: 0.5rem;
+    background-image: var(--black-gradient);
+    color: var(--accent-colour);
+}
+
+.visibleMobile { display: none; }
+
+.aside { 
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+    animation-delay: 0.5s;
+}
+
+.activeButton::before { opacity: 1; }
+.activeButton  {
+    border-left: 2px solid var(--secondary-colour);
+    background: transparent;
+}
+
+.lockedButtonContainer { display: flex; }
+.lockedButtonContainer:nth-child(2) { margin-left: -0.05rem; }
+.lockedButton:hover::before { opacity: 0; }
+.lockedButton, .lockedButton:hover, .lockedButton:focus {
+  width: 7.6em;
+  height: 2.8em;
+  background-color: var(--grey-background);
+  background-image: none;
+  color: var(--grey-text);
+  border: none;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    animation-delay: 0.7s;
+}
+
+.noStyles { all: initial; }
+
+@media screen AND (max-width: 432px) AND (orientation: portrait) {
+    .brandLogo, .heading { 
+        height: 2.4rem;
+        width: 50vh;
+    }
+    .heading { font-size: 1.5rem; }
+    .visibleDesktop { display: none; }
+    .visibleMobile {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1.6em 1fr 1.2em;
+        padding: 0;
+        row-gap: 0;
+    }
+}
+
+@media screen AND (max-width:820px) AND (orientation:portrait) {
+    .main { height:100vw; }
+    .brandLogo, .heading { 
+        height: 2.4rem;
+        width: 50vh;
+    }
+}
+
+@media screen AND (max-height: 432px) AND (orientation: landscape) {
+    .brandLogo, .heading { height: 2.4rem; }
+    .heading { font-size: 1.5rem; }
+    .visibleDesktop { display: none; }
+    .visibleMobile {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1.6em 1fr 1.2em;
+        padding: 0;
+        row-gap: 0;
+    }
+}
+
+@media screen AND (min-height:800px) AND (max-height:820px) AND (orientation:landscape) {
+    .brandLogo, .heading {
+        height: 2.4rem; 
+        font-size: 1.8em;
+    }
+}

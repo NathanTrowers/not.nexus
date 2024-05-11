@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="58.096825mm"
+   height="18.531776mm"
+   viewBox="0 0 58.096825 18.531776"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><style
+     id="style33">
+.measure-arrow
+{
+}
+.measure-label
+{
+
+}
+.measure-line
+{
+}</style><defs
+     id="defs1"><linearGradient
+       id="linearGradient4"><stop
+         style="stop-color:#f40f0f;stop-opacity:1;"
+         offset="0"
+         id="stop4" /><stop
+         style="stop-color:#0076ff;stop-opacity:1;"
+         offset="1"
+         id="stop7" /></linearGradient><linearGradient
+       xlink:href="#linearGradient4"
+       id="linearGradient27"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.276263,0,0,1.276263,-7.6146324,-229.13138)"
+       x1="112.9155"
+       y1="197.14951"
+       x2="153.21693"
+       y2="197.14951" /><linearGradient
+       xlink:href="#linearGradient4"
+       id="linearGradient46"
+       x1="159.04967"
+       y1="124.31642"
+       x2="159.02672"
+       y2="137.96111"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad"
+       gradientTransform="matrix(1.2689077,0,0,1.2689077,-9.0120391,-144.09994)" /></defs><g
+     id="layer10"
+     transform="translate(-136.49523,-13.217361)"><path
+       style="font-size:19.7556px;font-family:Serif;-inkscape-font-specification:Serif;text-align:center;text-anchor:middle;fill:url(#linearGradient46);fill-rule:nonzero;stroke-width:10.9507;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       d="m 192.33594,26.502659 -0.77712,-12.859898 h 2.9079 l -0.77711,12.859898 z m 0.67684,5.214145 q -0.65178,0 -1.12808,-0.376015 -0.45122,-0.376016 -0.45122,-1.32861 0,-0.977643 0.45122,-1.328597 0.4763,-0.376029 1.12808,-0.376029 0.65176,0 1.10298,0.376029 0.4763,0.350954 0.4763,1.328597 0,0.952594 -0.4763,1.32861 -0.45122,0.376015 -1.10298,0.376015 z"
+       id="text43"
+       aria-label="!" /><text
+       xml:space="preserve"
+       style="font-size:25.2133px;font-family:Serif;-inkscape-font-specification:Serif;display:inline;fill:url(#linearGradient27);fill-opacity:1;stroke-width:11.0142;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="135.53712"
+       y="31.497004"
+       id="text33-9-2"><tspan
+         id="tspan33-3-6"
+         style="fill:url(#linearGradient27);stroke-width:11.0142"
+         x="135.53712"
+         y="31.497004"><tspan
+   style="fill:url(#linearGradient27);fill-opacity:1;stroke-width:11.0142"
+   id="tspan31-7-1">N</tspan><tspan
+   id="tspan32-4-0"
+   style="fill:url(#linearGradient27);fill-opacity:1;stroke-width:11.0142">O</tspan>T</tspan></text></g><metadata
+     id="metadata1"><rdf:RDF><cc:Work
+         rdf:about=""><dc:creator><cc:Agent><dc:title>Nathan Trowers</dc:title></cc:Agent></dc:creator></cc:Work></rdf:RDF></metadata></svg>

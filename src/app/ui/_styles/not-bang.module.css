@@ -1,0 +1,6 @@
+.notBang {
+    background: linear-gradient(180deg, #f40f0fff, #7a4287ff, #0076ffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

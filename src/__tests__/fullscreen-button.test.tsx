@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import FullscreenButton from '@/app/ui/fullscreen-button';
 
-describe('FullscreenButton', () => {
+describe('Fullscreen Button', () => {
     it('renders', () => {
         /** Act */
         render(

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 
-import AppCard from '@/app/ui/software/app-card';
+import AppCard from '@/app/ui/software/projects/app-card';
 
-describe('AppCard', () => {
+describe('AppCard Component', () => {
     it('renders', () => {
         /** Arrange */ 
         const data: any = {

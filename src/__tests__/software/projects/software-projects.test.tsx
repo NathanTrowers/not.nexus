@@ -1,20 +1,23 @@
 import { render, screen } from '@testing-library/react';
 
-import DesktopCardContainer from '@/app/ui/software/desktop-card-container';
-import data from './__mockData__/data';
+import SoftwareProjects from '@/app/ui/software/projects/software-projects';
+import data from '../__mockData__/data';
 
-describe('DesktopCardContainer Component', () => {
+describe('SoftwareProjects Page', () => {
     it('renders', () => {
         /** Act */
-        render(<DesktopCardContainer />);
+        render(<SoftwareProjects />);
 
         /** Assert */
-        const studyLogHeading: HTMLElement = screen.getByRole('heading', {name: `${data[0].title} Logo ${data[0].title}`});
-        const studyLogLogo: HTMLElement = screen.getByAltText(`${data[0].title} Logo`);
-        const studyLogDescription: HTMLElement = screen.getByText(`${data[0].description}`);
-        const studyLogTechStack: HTMLElement = screen.getByText(`${data[0].techStack}`);
+        const h1Heading: HTMLElement = screen.getByRole('heading', {name: '! My App Portfolio'});
+        const homeLink: HTMLElement = screen.getByRole('link', {name: 'Link to the Home Page'});
+
+        const studyLogHeading: HTMLElement = screen.getAllByRole('heading', {name: `${data[0].title} Logo ${data[0].title}`})[0];
+        const studyLogLogo: HTMLElement = screen.getAllByAltText(`${data[0].title} Logo`)[0];
+        const studyLogDescription: HTMLElement = screen.getAllByText(`${data[0].description}`)[0];
+        const studyLogTechStack: HTMLElement = screen.getAllByText(`${data[0].techStack}`)[0];
         const studyLogAppLink: HTMLElement = screen.getAllByRole('link', {name: 'Try Me!'})[0];
-        const studyLogRepoLink: HTMLElement = screen.getByRole('link', {name: `Link to the ${data[0].title} GitHub repository`});
+        const studyLogRepoLink: HTMLElement = screen.getAllByRole('link', {name: `Link to the ${data[0].title} GitHub repository`})[0];
 
         const comicCometHeading: HTMLElement = screen.getByRole('heading', {name: `${data[1].title} Logo ${data[1].title}`});
         const comicCometLogo: HTMLElement = screen.getByAltText(`${data[1].title} Logo`);
@@ -37,6 +40,9 @@ describe('DesktopCardContainer Component', () => {
         const notAppLink: HTMLElement = screen.getAllByRole('link', {name: 'Try Me!'})[3];
         const notRepoLink: HTMLElement = screen.getByRole('link', {name: `Link to the ${data[3].title} GitHub repository`});
         
+        expect(h1Heading).toBeInTheDocument();
+        expect(homeLink).toBeInTheDocument();
+
         expect(studyLogHeading).toBeInTheDocument();
         expect(studyLogLogo).toBeInTheDocument();
         expect(studyLogDescription).toBeInTheDocument();

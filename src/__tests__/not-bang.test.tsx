@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import NotBang from '@/app/ui/not-bang';
 
-describe('NOT Bang Component', () => {
+describe('NotBang Component', () => {
     it('renders',  () => {
         /** Act */
         render(

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import MobileCardContainer from '@/app/ui/software/mobile-card-container';
-import data from './__mockData__/data';
+import MobileCardContainer from '@/app/ui/software/projects/mobile-card-container';
+import data from '../__mockData__/data';
 
 describe('MobileCardContainer Component', () => {
     it('renders the first card', () => {

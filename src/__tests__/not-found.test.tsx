@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import NotFound from '@/app/not-found';
 
-describe('404 Page', () => {
+describe('NotFound (404) Page', () => {
     it('renders', () => {
         /** Act */
         render(<NotFound />);

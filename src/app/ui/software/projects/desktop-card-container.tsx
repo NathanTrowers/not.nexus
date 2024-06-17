@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import AppCard from '@/app/ui/software/app-card';
-import styles from '@/app/ui/software/_styles/software-projects.module.css'
+import AppCard from '@/app/ui/software/projects/app-card';
+import styles from '@/app/ui/software/projects/_styles/software-projects.module.css'
 
 export default function DesktopCardContainer() {
     // 2n-n/5.16 = height of official-lock iamge
@@ -10,7 +10,7 @@ export default function DesktopCardContainer() {
     const FADE_IN_CLASS: string =  'fadeIn';
 
     return (
-        <div>
+        <div aria-live='polite'>
             <aside className={`${styles.visibleDesktop} ${styles.aside} ${FADE_IN_CLASS}`}>
                 <button tabIndex={-1} className={styles.activeButton}>Personal</button>
                 <span className={styles.lockedButtonContainer} >

@@ -55,7 +55,6 @@ describe('MobileCardContainer Component', () => {
         expect(comicCometRepoLink).toBeInTheDocument();
     });
 
-
     it('renders the third card', () => {
         /** Arrange */
         jest.spyOn(React, 'useState')
@@ -84,7 +83,6 @@ describe('MobileCardContainer Component', () => {
         expect(androidAceAppLink).toBeInTheDocument();
         expect(androidAceRepoLink).toBeInTheDocument();
     });
-
 
     it('renders the fourth card', () => {
         /** Arrange */

@@ -47,12 +47,12 @@
 .lockedButtonContainer:nth-child(2) { margin-left: -0.05rem; }
 .lockedButton:hover::before { opacity: 0; }
 .lockedButton, .lockedButton:hover, .lockedButton:focus {
-  width: 7.6em;
-  height: 2.8em;
-  background-color: var(--grey-background);
-  background-image: none;
-  color: var(--grey-text);
-  border: none;
+    width: 7.6em;
+    height: 2.8em;
+    background-color: var(--grey-background);
+    background-image: none;
+    color: var(--grey-text);
+    border: none;
 }
 
 .projectsContainer {

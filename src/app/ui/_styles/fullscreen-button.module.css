@@ -1,5 +1,4 @@
 .fullscreenButton:before { background-image: var(--grey-colour-gradient); }
-
 .fullscreenButton {
     position: fixed;
     bottom: 0.5rem;
@@ -8,7 +7,6 @@
     height: 1rem;
     background-color: var(--black);
 }
-
 .fullscreenButton:hover, .fullscreenButton:focus {
     border-left: 2px solid var(--black);
 }

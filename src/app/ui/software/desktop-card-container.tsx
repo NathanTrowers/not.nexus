@@ -4,8 +4,8 @@ import AppCard from '@/app/ui/software/app-card';
 import styles from '@/app/ui/software/_styles/software-projects.module.css'
 
 export default function DesktopCardContainer() {
-    // 62*2-62/5.16 = 112
-    // 2n-n/5.16 = height
+    // 2n-n/5.16 = height of official-lock iamge
+    // Eg: when n=62, 62*2-62/5.16 = 112
 
     const FADE_IN_CLASS: string =  'fadeIn';
 

@@ -9,7 +9,7 @@ import FullscreenButton from '@/app/ui/fullscreen-button';
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {    
+  useEffect(() => {
     setTimeout(
       () => setLoaded(true),
       2000

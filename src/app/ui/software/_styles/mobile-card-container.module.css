@@ -15,12 +15,12 @@
 .lockedButtonContainer { display: flex; }
 .lockedButton:hover::before { opacity: 0; }
 .lockedButton, .lockedButton:hover, .lockedButton:focus {
-  height: 0.5em;
-  font-size: 0.9em;
-  background-color: var(--grey-background-2);
-  background-image: none;
-  color: var(--grey-text);
-  border: none;
+    height: 0.5em;
+    font-size: 0.9em;
+    background-color: var(--grey-background-2);
+    background-image: none;
+    color: var(--grey-text);
+    border: none;
 }
 
 .projectsContainerMobile {

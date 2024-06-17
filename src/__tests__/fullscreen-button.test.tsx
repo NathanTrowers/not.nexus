@@ -13,6 +13,5 @@ describe('FullscreenButton', () => {
         const fullScreenButton: HTMLElement = screen.getByRole('button');
 
         expect(fullScreenButton).toBeInTheDocument();
-
     });
 });

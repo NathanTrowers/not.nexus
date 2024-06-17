@@ -11,20 +11,13 @@
 }
   
 @keyframes hover-glow {
-  0% {
-    transform: translate(0, -40px);
-    box-shadow: 0px 3px 10px 2px var(--black), 0px -3px 10px var(--black);
-  }
-  100% {
-    transform: translate(0, -5px);
-    box-shadow: 0px 3px 10px 2px var(--white), 0px -3px 10px var(--white);
-  }
+  0% { transform: translate(0, -40px); }
+  100% { transform: translate(0, -5px); }
 }
 
-.tempLogo {
+.brandLogo {
   color: var(--accent-colour);
-  text-align: center;
-  border-radius: .3em;
+  padding: 0.3rem;
   animation: hover-glow 2s ease-in-out infinite alternate;
 }
 
@@ -39,6 +32,6 @@
   animation: blink 2s ease-in-out infinite alternate;
 }
 
-@media screen AND (max-width:895px) AND (orientation:portrait) {
+@media screen AND (max-width:430px) AND (orientation:portrait) {
   .main { height:100vw; }
 }

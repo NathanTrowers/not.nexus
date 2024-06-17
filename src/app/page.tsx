@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 
 import Loading from '@/app/ui/loading';
-import { LandingPage } from '@/app/ui/landing-page';
-
+import LandingPage from '@/app/ui/landing-page';
+import FullscreenButton from '@/app/ui/fullscreen-button';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -19,7 +19,12 @@ export default function Home() {
   return (
     <>
       {!loaded && <Loading />}
-      {loaded && <LandingPage />}
+      {loaded &&
+        <>
+          <LandingPage />
+          <FullscreenButton />
+        </>
+      }
     </>
   );
 }

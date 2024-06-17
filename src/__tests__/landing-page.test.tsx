@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import { LandingPage } from '@/app/ui/landing-page';
+import LandingPage from '@/app/ui/landing-page';
 
 describe('Landing Page', () => {
     it('renders main view', () => {
@@ -59,7 +59,7 @@ describe('Landing Page', () => {
         render(<LandingPage />);
         
         /** Assert */
-        const heading: HTMLElement = screen.getByRole('heading', {name: 'NOT: The Software Engineer'});
+        const heading: HTMLElement = screen.getByRole('heading', {name: '! The Software Engineer'});
         const backButton: HTMLElement = screen.getByRole('button', {name: 'Back'});
         const projectsButton: HTMLElement = screen.getByRole('link', {name: 'Projects'});
         const hireNOTButton: HTMLElement = screen.getByRole('link', {name: 'Hire NOT'});

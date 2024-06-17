@@ -15,6 +15,7 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/src/__tests__/software/__mockData__/'],
   testEnvironment: "jsdom",
 };
 

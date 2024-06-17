@@ -1,18 +1,24 @@
 :root {
   --max-width: 1100px;
   --primary-colour: #071e85;
+  --primary-colour-transparent: #071e85bd;
   --secondary-colour: #ff0000;
+  --secondary-colour-transparent: #ff0000bd;
   --accent-colour: #9678a7bd;
   --accent-colour-dark: #775f85bd;
   --black: #000000;
+  --black-transparent: #000000bd;
   --white: #ffffff;
   --secondary-colour-dark: #3f0909;
-  --primary-colour-gradient: linear-gradient(to right, #071e85ff, #8b9ffa8f, #8b9ffa11);
+  --primary-colour-gradient: linear-gradient(to right, #071e85ff, #8b9ffa8f, #8b9ffa01);
   --secondary-colour-gradient: linear-gradient(to right, #861037d3, #ff0000c7, #e75050b4, #ff0000c7, #861037d3, #ff0000c7, #e75050b4);
   --grey-colour-gradient: linear-gradient(to right, #969696d3, #cececec7, #ffffffb4, #cececec7, #969696d3, #cececec7, #ffffffb4);
   --black-gradient: linear-gradient(to left, #000000ff, #4d4d4d01);
-  
-  font-size: 1.3rem; /** 24px **/
+  --grey-background: #9b9999bd;
+  --grey-background-2: #a1a1a1bd;
+  --grey-text: #424242bd;
+
+  font-size: 1.3rem; /** 23.5px **/
   background-color: var(--black);
   color: var(--white);
 }
@@ -55,7 +61,7 @@ button, a {
   display: flex;
   align-items: center;
   width: 13em;
-  height: 3em;
+  height: 2.8em;
   padding: 1em;
   font-size: 1em;
   border: none;

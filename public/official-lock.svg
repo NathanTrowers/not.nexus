@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="63.05093mm"
+   height="35.035587mm"
+   viewBox="0 0 63.05093 35.035587"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <g
+     id="layer4"
+     transform="translate(-83.230738,-32.498275)">
+    <path
+       id="rect2"
+       style="opacity:0.63746;fill:#888686;fill-opacity:0.741176;stroke-width:8.8479;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       d="m 100.74853,32.498275 a 17.517792,17.517792 0 0 0 -17.51779,17.517794 17.517792,17.517792 0 0 0 17.51779,17.517793 17.517792,17.517792 0 0 0 1.29502,-0.0925 v 0.01292 h 44.23812 v -34.9219 h -44.23812 v 0.01964 a 17.517792,17.517792 0 0 0 -1.29502,-0.05374 z" />
+  </g>
+  <g
+     id="layer3"
+     transform="translate(-83.230738,-32.498275)">
+    <path
+       id="rect1"
+       style="opacity:0.63746;fill:#4d4c4c;fill-opacity:0.741176;stroke-width:4.21893;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       d="m 108.77563,39.70883 a 7.069841,7.069841 0 0 0 -6.99256,6.283198 h -0.2067 v 12.94038 h 14.57278 v -12.94038 h -0.36487 a 7.069841,7.069841 0 0 0 -7.00865,-6.283198 z m 0,1.413097 a 5.6566285,5.6566285 0 0 1 5.56526,4.870101 h -11.13025 a 5.6566285,5.6566285 0 0 1 5.56499,-4.870101 z" />
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Nathan Trowers</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

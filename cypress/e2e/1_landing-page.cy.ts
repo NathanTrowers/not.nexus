@@ -35,7 +35,7 @@ describe('Landing Page', () => {
     cy.contains('Martial Arts');
     cy.contains('Software Engineering').click();
 
-    cy.contains('NOT: The Software Engineer');
+    cy.contains('!The Software Engineer');
     cy.contains('Projects');
     cy.contains('Hire NOT');
     cy.contains('Back').click();
@@ -86,7 +86,7 @@ describe('Landing Page', () => {
     });
   });
 
-  it('loads landing page, then shows software engineering buttons, then navigates to the Software Projects Page', () => {
+  it('loads landing page, then shows software engineering buttons, then navigates to the Software Portfolio Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
@@ -95,12 +95,12 @@ describe('Landing Page', () => {
     cy.contains('Martial Arts');
     cy.contains('Software Engineering').click();
 
-    cy.contains('NOT: The Software Engineer');
+    cy.contains('!The Software Engineer');
     cy.contains('Back');
     cy.contains('Hire NOT');
     cy.contains('Projects').click();
 
-    cy.contains('projects page');
+    cy.contains('My App Portfolio');
   });
 
   it('loads landing page, then shows software engineering buttons, then navigates to the Hire NOT Page', () => {
@@ -112,7 +112,7 @@ describe('Landing Page', () => {
     cy.contains('Martial Arts');
     cy.contains('Software Engineering').click();
 
-    cy.contains('NOT: The Software Engineer');
+    cy.contains('!The Software Engineer');
     cy.contains('Back');
     cy.contains('Projects');
     cy.contains('Hire NOT').click();
@@ -122,8 +122,6 @@ describe('Landing Page', () => {
 
   it('navigates to and from both the contact and softawre engineer views, checking the accessibility', () => {
     cy.injectAxe();
-
-    cy.checkA11y(null, null, terminalLog);
 
     cy.contains('Contact').click();
     cy.checkA11y(null, null, terminalLog);
@@ -135,5 +133,6 @@ describe('Landing Page', () => {
     cy.checkA11y(null, null, terminalLog);
 
     cy.contains('Back').click();
+    cy.checkA11y(null, null, terminalLog);
   });
 });

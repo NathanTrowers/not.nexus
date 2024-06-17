@@ -1,0 +1,21 @@
+.fullscreenButton:before { background-image: var(--grey-colour-gradient); }
+.fullscreenButton {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--black);
+}
+.fullscreenButton:hover, .fullscreenButton:focus {
+    border-left: 2px solid var(--black);
+}
+
+.fullscreenButtonIcon {
+    position: fixed;
+    bottom: 0.2rem;
+    right: 0.2rem;
+}
+
+.invisible { display: none; }
+

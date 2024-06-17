@@ -1,0 +1,86 @@
+.projectTypeButtonContainer {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0.15em 0;
+    animation-delay: 0.5s;
+}
+
+.personalButton {
+    height: 0.5em;
+    font-size: 0.9em;
+}
+
+.lockedButtonContainer { display: flex; }
+.lockedButton:hover::before { opacity: 0; }
+.lockedButton, .lockedButton:hover, .lockedButton:focus {
+    height: 0.5em;
+    font-size: 0.9em;
+    background-color: var(--grey-background-2);
+    background-image: none;
+    color: var(--grey-text);
+    border: none;
+}
+
+.projectsContainerMobile {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    animation-delay: 0.7s;
+}
+
+.prev, .next {
+    cursor: pointer;
+    width: 2em;
+    padding: 0.7em;
+    color: var(--white);
+    font-weight: bold;
+    transition: 1s ease;
+    user-select: none;
+    animation-delay: 0.7s;
+}
+.prev {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    justify-self: right;
+}
+.next {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: left;
+}
+
+.visible { display: flex; }
+.invisible { display: none; }
+
+.dotsContainer {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    animation-delay: 0.9s;
+}
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.fadeAway {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.dot, .activeDot {
+    display: inline-block;
+    cursor: pointer;
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50%;
+    margin: 0 0.1em;
+    background-color: var(--primary-colour-transparent);
+    transition: background-color 1s ease;
+}
+.dot:hover, .dot:focus {
+    background-color: var(--secondary-colour-dark);
+}
+.activeDot { background-color: var(--secondary-colour-transparent); }

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import FullscreenButton from '@/app/ui/fullscreen-button';
-import SoftwareProjects from "@/app/ui/software/software-projects";
+import SoftwareProjects from "@/app/ui/software/projects/software-projects";
 
 export const metadata: Metadata = {
     title: 'App Portfolio',

@@ -1,0 +1,114 @@
+.main {
+    background: url(/software-engineering-background.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+}
+
+.section {
+    display: grid;
+    place-items: center;
+    grid-gap: 2rem;
+    margin-top: 0.5rem;
+    height: 90%;
+    animation-delay: 0.4s;
+}
+
+.pitch {
+    display: grid;
+    justify-content: start;
+    gap: 1em;
+    width: 70%;
+    margin: 0.6em;
+    padding: 2em;
+    background: var(--primary-colour-transparent);
+    overflow: auto;
+}
+.pitch::-webkit-scrollbar { width: 0.4em; }
+.pitch::-webkit-scrollbar-track { background: var(--accent-colour-dark); }
+.pitch::-webkit-scrollbar-thumb {
+    width: 0.8em;
+    background: var(--accent-colour);
+}
+
+.list {
+    padding-left: 2em;
+    text-indent: 0.5em;
+}
+
+.link:before {
+    all: initial;
+}
+.link {
+    all: initial;
+    padding: 0.3em;
+    color: var(--accent-colour);
+}
+.link:hover, .link:focus {
+    border: none;
+    text-decoration: underline;
+    color: var(--accent-colour-dark);
+}
+
+@media screen AND (max-width: 375px) AND (orientation: portrait) {
+    .main { height: 100vw; }
+    .section {
+        font-size: 70%;
+        height: 80%;
+    }
+    .pitch { height: 70vw; }
+}
+
+@media screen AND (min-width: 376px) AND (max-width: 390px) AND (orientation: portrait) {
+    .main { height: 100vw; }
+    .section { 
+        font-size: 78%;
+        height: 80%;
+    }
+    .pitch { height: 70vw; }
+}
+
+@media screen AND (min-width: 391px) AND (max-width: 432px) AND (orientation: portrait) {
+    .main { height: 100vw; }
+    .section { 
+        font-size: 85%;
+        height: 80%;
+    }
+    .pitch { height: 70vw; }
+}
+
+@media screen AND (min-width: 433px) AND (max-width:820px) AND (orientation:portrait) {
+    .main { height: 100vw; }
+    .section { height: 90%; }
+    .pitch { height: 70vw; }
+}
+
+@media screen AND (max-height: 375px) AND (orientation: landscape) {
+    .section { 
+        font-size: 70%;
+        height: 80%;
+    }
+    .pitch { height: 70vh; }
+}
+
+@media screen AND (min-height: 376px) AND (max-height: 390px) AND (orientation: landscape) {
+    .section { 
+        font-size: 78%;
+        height: 80%;
+    }
+    .pitch { height: 70vh; }
+}
+
+@media screen AND (min-height: 391px) AND (max-height: 432px) AND (orientation: landscape) {
+    .section { 
+        font-size: 85%;
+        height: 80%;
+    }
+    .pitch { height: 70vh; }
+}
+
+@media screen AND (min-height: 433px) AND (max-height:820px) AND (orientation:landscape) {
+    .main { height:100vh; }
+    .section { height: 90%; }
+    .pitch { height: 70vh; }
+}

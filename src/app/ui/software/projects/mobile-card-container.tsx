@@ -3,9 +3,9 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import AppCard from '@/app/ui/software/app-card';
-import stylesMobile from '@/app/ui/software/_styles/mobile-card-container.module.css';
-import stylesProjects from '@/app/ui/software/_styles/software-projects.module.css';
+import AppCard from '@/app/ui/software/projects/app-card';
+import stylesMobile from '@/app/ui/software/projects/_styles/mobile-card-container.module.css';
+import stylesProjects from '@/app/ui/software/projects/_styles/software-projects.module.css';
 
 export default function MobileCardContainer() {
     const [cardIndex, setCardIndex] = useState(1);

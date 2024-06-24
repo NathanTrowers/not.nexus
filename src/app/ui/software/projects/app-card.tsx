@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/app/ui/software/_styles/app-card.module.css';
+
+import styles from '@/app/ui/software/projects/_styles/app-card.module.css';
 
 export default function AppCard({ 
     title, logo, description,

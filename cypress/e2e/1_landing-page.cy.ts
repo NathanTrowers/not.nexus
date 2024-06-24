@@ -117,7 +117,7 @@ describe('Landing Page', () => {
     cy.contains('Projects');
     cy.contains('Hire NOT').click();
 
-    cy.contains('Hire NOT page');
+    cy.contains('Hire NOT');
   });
 
   it('navigates to and from both the contact and softawre engineer views, checking the accessibility', () => {

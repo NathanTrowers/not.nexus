@@ -3,7 +3,7 @@ import React from 'react';
 
 import LandingPage from '@/app/ui/landing-page';
 
-describe('Landing Page', () => {
+describe('LandingPage', () => {
     it('renders main view', () => {
         /** Act */
         render(<LandingPage />);

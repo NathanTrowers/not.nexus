@@ -1,4 +1,4 @@
 
-# not.com
+# not.com <img src="public/not-acronym.svg" alt="not.com acronym logo" width="40">
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is my portfolio website.

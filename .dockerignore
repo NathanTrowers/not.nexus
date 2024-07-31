@@ -1,0 +1,16 @@
+#VS Code and Extensions
+.vscode
+.history
+
+#NPM files
+node_modules
+npm-debug.log
+
+#Docker files
+Dockerfile
+compose.yaml
+.dockerignore
+
+#GIT files
+.git
+.gitignore

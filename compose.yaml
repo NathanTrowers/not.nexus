@@ -1,0 +1,25 @@
+services: 
+  not-portfolio:
+    container_name: not-portfolio
+    build: ./not-portfolio
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        window: 120s
+    environment:
+      STUDYLOG_URL: /run/secrets/studylog_link
+      COMIC_COMET_URL: /run/secrets/comic_comet_link
+    ports:
+      - 3000:3000
+    secrets:
+      - studylog_link
+      - comic_comet_link
+    volumes:
+      - ./not-portfolio:/usr/src/app
+  
+secrets:
+  studylog_link:
+    file: ./studylog_link.txt
+  comic_comet_link:
+    file: ./comic_comet_link.txt

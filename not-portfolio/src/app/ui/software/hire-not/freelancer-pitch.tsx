@@ -11,7 +11,7 @@ export default function FreelancerPitch() {
                 <div className={styles.pitch} role='document'>
                     <h2>Make Your Dream Web App a Reality!</h2>
                     <p>
-                        Execution is what separates a person who's dreams stay dreams from one who's dream becomes a reality.
+                        Execution is what separates a person who&apos;s dreams stay dreams from one who&apos;s dream becomes a reality.
                         At the crossroads of executing on your dreams or executing your dreams, there are three paths:
                     </p>
                         <ol className={styles.list}>
@@ -22,7 +22,7 @@ export default function FreelancerPitch() {
                     <p>
                         If you have analysis paralysis, let me do the worrying. If you are Mr./Ms. DIY, let me 
                         spend my time working to save you some of yours. Hire NOT and bring your web app to life!
-                        After working with me, you'll call me Mr. MVP!
+                        After working with me, you&apos;ll call me Mr. MVP!
                     </p>
                     <p> To get started, email me at not@not.com.  You can also reach out to me via 
                         <a

@@ -9,7 +9,7 @@ export default function AppCard({
     invisible
 }: {
     title: string; logo: string; description: string;
-    techStack: string; appLink: string; repoLink: string;
+    techStack: string; appLink?: string; repoLink: string;
     invisible?: string;
 }) {
     return (
@@ -29,10 +29,12 @@ export default function AppCard({
             </h2>
             <p className={styles.descriptionMargin}>{description}</p>
             <p className={styles.defaultMargin}><em>Tech Stack:</em> {techStack}</p>
-            <Link
-                className={`${styles.defaultMargin} ${styles.longerButton}`}
-                href={appLink}
-            >Try Me!</Link>
+            {appLink &&
+                <Link
+                    className={`${styles.defaultMargin} ${styles.longerButton}`}
+                    href={appLink}
+                >Try Me!</Link>
+            }
             <a
                 className={`${styles.defaultMargin} ${styles.longerButton}`}
                 aria-label={`Link to the ${title} GitHub repository`}

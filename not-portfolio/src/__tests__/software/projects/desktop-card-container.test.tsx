@@ -27,14 +27,13 @@ describe('DesktopCardContainer Component', () => {
         const androidAceLogo: HTMLElement = screen.getByAltText(`${data[2].title} Logo`);
         const androidAceDescription: HTMLElement = screen.getByText(`${data[2].description}`);
         const androidAceTechStack: HTMLElement = screen.getByText(`${data[2].techStack}`);
-        const androidAceAppLink: HTMLElement = screen.getAllByRole('link', {name: 'Try Me!'})[2];
         const androidAceRepoLink: HTMLElement = screen.getByRole('link', {name: `Link to the ${data[2].title} GitHub repository`});
         
         const notHeading: HTMLElement = screen.getByRole('heading', {name: `${data[3].title} Logo ${data[3].title}`});
         const notLogo: HTMLElement = screen.getByAltText(`${data[3].title} Logo`);
         const notDescription: HTMLElement = screen.getByText(`${data[3].description}`);
         const notTechStack: HTMLElement = screen.getByText(`${data[3].techStack}`);
-        const notAppLink: HTMLElement = screen.getAllByRole('link', {name: 'Try Me!'})[3];
+        const notAppLink: HTMLElement = screen.getAllByRole('link', {name: 'Try Me!'})[2];
         const notRepoLink: HTMLElement = screen.getByRole('link', {name: `Link to the ${data[3].title} GitHub repository`});
         
         expect(studyLogHeading).toBeInTheDocument();
@@ -55,7 +54,6 @@ describe('DesktopCardContainer Component', () => {
         expect(androidAceLogo).toBeInTheDocument();
         expect(androidAceDescription).toBeInTheDocument();
         expect(androidAceTechStack).toBeInTheDocument();
-        expect(androidAceAppLink).toBeInTheDocument();
         expect(androidAceRepoLink).toBeInTheDocument();
         
         expect(notHeading).toBeInTheDocument();

@@ -73,14 +73,12 @@ describe('MobileCardContainer Component', () => {
         const androidAceLogo: HTMLElement = screen.getByAltText(`${data[2].title} Logo`);
         const androidAceDescription: HTMLElement = screen.getByText(`${data[2].description}`);
         const androidAceTechStack: HTMLElement = screen.getByText(`${data[2].techStack}`);
-        const androidAceAppLink: HTMLElement = screen.getByRole('link', {name: 'Try Me!'});
         const androidAceRepoLink: HTMLElement = screen.getByRole('link', {name: `Link to the ${data[2].title} GitHub repository`});
         
         expect(androidAceHeading).toBeInTheDocument();
         expect(androidAceLogo).toBeInTheDocument();
         expect(androidAceDescription).toBeInTheDocument();
         expect(androidAceTechStack).toBeInTheDocument();
-        expect(androidAceAppLink).toBeInTheDocument();
         expect(androidAceRepoLink).toBeInTheDocument();
     });
 

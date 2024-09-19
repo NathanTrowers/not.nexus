@@ -27,10 +27,10 @@ describe('Software Projects Page', () => {
             cy.contains('Tech Stack: Java with Android SDK');
             cy.contains('View the AndroidAce GitHub Repo!');
     
-            cy.contains('not.com (this website)');
+            cy.contains('not.nexus (this website)');
             cy.contains('Portfolio Website of Nathan O. Trowers.');
             cy.contains('Tech Stack: Next.js (TypeScript)');
-            cy.contains('View the not.com (this website) GitHub Repo!');
+            cy.contains('View the not.nexus (this website) GitHub Repo!');
         });
     
         it('passes accessibility checks on the desktop view', () => {
@@ -63,10 +63,10 @@ describe('Software Projects Page', () => {
             cy.contains('View the AndroidAce GitHub Repo!');
         
             cy.getByData('next-button').click();
-            cy.contains('not.com (this website)');
+            cy.contains('not.nexus (this website)');
             cy.contains('Portfolio Website of Nathan O. Trowers.');
             cy.contains('Tech Stack: Next.js (TypeScript)');
-            cy.contains('View the not.com (this website) GitHub Repo!');
+            cy.contains('View the not.nexus (this website) GitHub Repo!');
 
             cy.getByData('next-button').click();
             cy.contains('Study Log');
@@ -75,10 +75,10 @@ describe('Software Projects Page', () => {
             cy.contains('View the Study Log GitHub Repo!');
 
             cy.getByData('prev-button').click();
-            cy.contains('not.com (this website)');
+            cy.contains('not.nexus (this website)');
             cy.contains('Portfolio Website of Nathan O. Trowers.');
             cy.contains('Tech Stack: Next.js (TypeScript)');
-            cy.contains('View the not.com (this website) GitHub Repo!');
+            cy.contains('View the not.nexus (this website) GitHub Repo!');
             
             cy.getByData('prev-button').click();
             cy.contains('AndroidAce');
@@ -121,10 +121,10 @@ describe('Software Projects Page', () => {
             cy.contains('View the AndroidAce GitHub Repo!');
         
             cy.getByData('card-dot-four').click();
-            cy.contains('not.com (this website)');
+            cy.contains('not.nexus (this website)');
             cy.contains('Portfolio Website of Nathan O. Trowers.');
             cy.contains('Tech Stack: Next.js (TypeScript)');
-            cy.contains('View the not.com (this website) GitHub Repo!');
+            cy.contains('View the not.nexus (this website) GitHub Repo!');
 
             cy.getByData('card-dot-one').click();
             cy.contains('Study Log');
@@ -160,10 +160,10 @@ describe('Software Projects Page', () => {
             cy.checkA11y(null, null, terminalLog);
         
             cy.getByData('card-dot-four').click();
-            cy.contains('not.com (this website)');
+            cy.contains('not.nexus (this website)');
             cy.contains('Portfolio Website of Nathan O. Trowers.');
             cy.contains('Tech Stack: Next.js (TypeScript)');
-            cy.contains('View the not.com (this website) GitHub Repo!');
+            cy.contains('View the not.nexus (this website) GitHub Repo!');
             cy.checkA11y(null, null, terminalLog);
         });
     });

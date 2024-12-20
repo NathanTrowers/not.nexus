@@ -1,5 +1,5 @@
-import Header from "@/app/ui/software/header";
-import styles from '@/app/ui/software/hire-not/_styles/hire-not.module.css';
+import Header from "@/ui/software/header";
+import styles from '@/ui/software/hire-not/_styles/hire-not.module.css';
 
 export default function FreelancerPitch() {
     const FADE_IN_CLASS: string =  'fadeIn';

@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 
-import Loading from '@/app/ui/loading';
-import LandingPage from '@/app/ui/landing-page';
-import FullscreenButton from '@/app/ui/fullscreen-button';
+import FullscreenButton from '@/ui/fullscreen-button';
+import Loading from '@/ui/loading';
+import LandingPage from '@/ui/landing-page';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import NotBang from '@/app/ui/not-bang';
-import styles from '@/app/ui/software/_styles/header.module.css';
+import NotBang from '@/ui/not-bang';
+import styles from '@/ui/software/_styles/header.module.css';
 
 export default function Header({ heading, notBang }:{ heading: string, notBang?: boolean }) {
     const FADE_IN_CLASS: string =  'fadeIn';

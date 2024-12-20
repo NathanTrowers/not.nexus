@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import styles from '@/app/ui/_styles/fullscreen-button.module.css'
+import styles from '@/ui/_styles/fullscreen-button.module.css'
 import { useEffect, useState } from 'react';
 
 export default function FullscreenButton() {

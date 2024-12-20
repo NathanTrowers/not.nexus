@@ -4,16 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import NotBang from '@/app/ui/not-bang';
-import styles from '@/app/ui/_styles/landing-page.module.css';
+import styles from '@/ui/_styles/landing-page.module.css';
 
 
 export default function LandingPage() {
   const [mainViewClass, setMainViewClass] = useState('fadeIn');
   const [contactViewClass, setContactViewClass] = useState(`${styles.invisible}`);
-  const [softwareEngineeringViewClass, setSoftwareEngineeringViewClass] = useState(`${styles.invisible}`);
   const [showContact, setShowContact] = useState(false);
-  const [showSoftwareEngineering, setShowSoftwareEngineering] = useState(false);
 
   const onClickContact = () => {
     setMainViewClass('fadeOut');
@@ -23,19 +20,6 @@ export default function LandingPage() {
       () => {
         setMainViewClass(mainViewClass + ` ${styles.invisible}`);
         setShowContact(true);
-      },
-      1000
-    );
-  }
-
-  const onClickSoftwareEngineering = () => {
-    setMainViewClass('fadeOut');
-    setSoftwareEngineeringViewClass('fadeIn');
-    
-    setTimeout(
-      () => {
-        setMainViewClass(mainViewClass + ` ${styles.invisible}`);
-        setShowSoftwareEngineering(true);
       },
       1000
     );
@@ -53,29 +37,16 @@ export default function LandingPage() {
       1000
     );
   }
-
-  const onClickBackSoftwareEngineering = () => {
-    setMainViewClass('fadeIn');
-    setSoftwareEngineeringViewClass('fadeOut');
-
-    setTimeout(
-      () => {
-        setContactViewClass(contactViewClass + ` ${styles.invisible}`);
-        setShowSoftwareEngineering(false);
-      },
-      1000
-    );
-  }
     
   function MainSection() {
     return (
       <>
         <h1 className={`${styles.heading} ${mainViewClass}`}>Main Menu</h1>
-        <button 
+        <Link
             className={`${styles.topButton} ${mainViewClass}`}
             aria-live='polite'
-            onClick={onClickSoftwareEngineering}
-        >Software Engineering</button>
+            href='/software/hire-not'
+        >Hire NOT</Link>
         <span className={`${styles.middleArea} ${mainViewClass}`}>
             <Image
                 width='112'
@@ -149,31 +120,6 @@ export default function LandingPage() {
     );
   }
 
-  function SoftwareEngineeringSection() {
-    return (
-      <>
-        <h1 className={`${styles.heading} ${softwareEngineeringViewClass}`}>
-          <NotBang />The Software Engineer
-        </h1>
-        <Link 
-            className={`${styles.topButton} ${softwareEngineeringViewClass}`}
-            aria-live='polite'
-            href='/software/projects'
-        >Projects</Link>
-        <Link
-            className={`${styles.middleArea} ${softwareEngineeringViewClass} ${styles.darkBackground}`}
-            aria-live='polite'
-            href='/software/hire-not'
-        >Hire NOT</Link>
-        <button
-            className={`${styles.contactButton} ${softwareEngineeringViewClass}`}
-            aria-live='polite'
-            onClick={onClickBackSoftwareEngineering}
-        >Back</button>
-      </>
-    );
-  }
-
   return (
     <main className={styles.main}>
       <header className={styles.brandLogo}>
@@ -190,9 +136,8 @@ export default function LandingPage() {
             priority
         />
       </header>
-      {!showContact && !showSoftwareEngineering && <MainSection />}
+      {!showContact && <MainSection />}
       {showContact && <ContactSection />}
-      {showSoftwareEngineering && <SoftwareEngineeringSection />}
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
-import FullscreenButton from '@/app/ui/fullscreen-button';
-import FreelancerPitch from '@/app/ui/software/hire-not/freelancer-pitch';
+import FullscreenButton from '@/ui/fullscreen-button';
+import FreelancerPitch from '@/ui/software/hire-not/freelancer-pitch';
 
 
 export const metadata: Metadata = {

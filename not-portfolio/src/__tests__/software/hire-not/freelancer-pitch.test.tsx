@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import FreelancerPitch from "@/app/ui/software/hire-not/freelancer-pitch";
+import FreelancerPitch from "@/ui/software/hire-not/freelancer-pitch";
 
 describe('FreelancerPitch Page', () => {
     it('renders', () => {

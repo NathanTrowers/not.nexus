@@ -9,7 +9,7 @@ describe('Landing Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
-    cy.contains('Software Engineering');
+    cy.contains('Hire NOT');
     cy.contains('Art');
     cy.contains('Martial Arts');
     cy.contains('Contact').click();
@@ -20,28 +20,7 @@ describe('Landing Page', () => {
     cy.contains('Back').click();
 
     cy.contains('Main Menu');
-    cy.contains('Software Engineering');
-    cy.contains('Art');
-    cy.contains('Martial Arts');
-    cy.contains('Contact');
-  });
-
-  it('loads landing page, then shows software engineering buttons, then returns to the previous view', () => {
-    cy.contains('Loading...');
-
-    cy.contains('Main Menu');
-    cy.contains('Software Engineering');
-    cy.contains('Art');
-    cy.contains('Martial Arts');
-    cy.contains('Software Engineering').click();
-
-    cy.contains('!The Software Engineer');
-    cy.contains('Projects');
     cy.contains('Hire NOT');
-    cy.contains('Back').click();
-
-    cy.contains('Main Menu');
-    cy.contains('Software Engineering');
     cy.contains('Art');
     cy.contains('Martial Arts');
     cy.contains('Contact');
@@ -51,7 +30,7 @@ describe('Landing Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
-    cy.contains('Software Engineering');
+    cy.contains('Hire NOT');
     cy.contains('Art');
     cy.contains('Martial Arts');
     cy.contains('Contact').click();
@@ -70,7 +49,7 @@ describe('Landing Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
-    cy.contains('Software Engineering');
+    cy.contains('Hire NOT');
     cy.contains('Art');
     cy.contains('Martial Arts');
     cy.contains('Contact').click();
@@ -86,35 +65,13 @@ describe('Landing Page', () => {
     });
   });
 
-  it('loads landing page, then shows software engineering buttons, then navigates to the Software Portfolio Page', () => {
+  it('loads landing page, then navigates to the Hire NOT Page', () => {
     cy.contains('Loading...');
 
     cy.contains('Main Menu');
-    cy.contains('Software Engineering');
-    cy.contains('Art');
-    cy.contains('Martial Arts');
-    cy.contains('Software Engineering').click();
-
-    cy.contains('!The Software Engineer');
-    cy.contains('Back');
     cy.contains('Hire NOT');
-    cy.contains('Projects').click();
-
-    cy.contains('My App Portfolio');
-  });
-
-  it('loads landing page, then shows software engineering buttons, then navigates to the Hire NOT Page', () => {
-    cy.contains('Loading...');
-
-    cy.contains('Main Menu');
-    cy.contains('Software Engineering');
     cy.contains('Art');
     cy.contains('Martial Arts');
-    cy.contains('Software Engineering').click();
-
-    cy.contains('!The Software Engineer');
-    cy.contains('Back');
-    cy.contains('Projects');
     cy.contains('Hire NOT').click();
 
     cy.contains('Hire NOT');
@@ -124,12 +81,6 @@ describe('Landing Page', () => {
     cy.injectAxe();
 
     cy.contains('Contact').click();
-    cy.checkA11y(null, null, terminalLog);
-
-    cy.contains('Back').click();
-    cy.checkA11y(null, null, terminalLog);
-
-    cy.contains('Software Engineering').click();
     cy.checkA11y(null, null, terminalLog);
 
     cy.contains('Back').click();

@@ -47,6 +47,6 @@ declare namespace Cypress {
     }
 }
 
-Cypress.Commands.add('getByData', (selector) => {
+Cypress.Commands.add('getByData', (selector) => { //TODO: Verify this is actually being used after the redesign
     return cy.get(`[data-test=${selector}]`);
 });

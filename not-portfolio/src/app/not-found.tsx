@@ -1,4 +1,4 @@
-import styles from '@/app/ui/_styles/not-found.module.css';
+import styles from '@/ui/_styles/not-found.module.css';
 
 export default function NotFound() {
     return (

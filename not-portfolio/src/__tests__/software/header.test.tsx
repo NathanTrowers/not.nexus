@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import Header from "@/app/ui/software/header";
+import Header from "@/ui/software/header";
 
 describe ('Header Component', () => {
     it('renders with notBang set to true', () => {

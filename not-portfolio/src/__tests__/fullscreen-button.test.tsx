@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import FullscreenButton from '@/app/ui/fullscreen-button';
+import FullscreenButton from '@/ui/fullscreen-button';
 
 describe('Fullscreen Button', () => {
     it('renders', () => {

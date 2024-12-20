@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import NotBang from '@/app/ui/not-bang';
+import NotBang from '@/ui/not-bang';
 
 describe('NotBang Component', () => {
     it('renders',  () => {

@@ -9,8 +9,5 @@ services:
         window: 120s
     ports:
       - 3000:3000
-    secrets:
-      - studylog_link
-      - comic_comet_link
     volumes:
       - ./not-portfolio:/usr/src/app

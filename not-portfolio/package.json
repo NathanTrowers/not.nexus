@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 {
   "name": "not.nexus",
+=======
+z{
+  "name": "not.com",
+>>>>>>> 75d37c7 (Rebased Commit)
   "version": "0.1.0",
   "private": true,
   "scripts": {

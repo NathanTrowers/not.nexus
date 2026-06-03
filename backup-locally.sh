@@ -1,18 +1,14 @@
 #!/bin/bash
 
-function backup() {
-    local source="$1"
-    local destination="$2"
-    local gitignorePath="$3"
+destination="$1"
 
-    if [ -d "$source" &&  -d "$destination" ]; then
-        echo "Backing up directory: $source to $destination"
-        if [ -f "$gitignorePath" ]; then
-            rsync -av --delete --exclude-from="$gitignorePath" "$source/" "$destination/"
-        else
-            rsync -av --delete "$source/" "$destination/"
-        fi
+if [ -d "$destination" ]; then
+    echo "Backing up directory to $destination"
+    if [ -f "./gitignore" ]; then
+        rsync -av --delete --include="*/" --exclude-from="./gitignore" "$PWD/" "$destination/"
     else
-        echo "Either the source directory $source or destination directory $destination does not exist."
+        rsync -av --delete "$PWD/" "$destination/"
     fi
-}
+else
+    echo "The destination directory $destination does not exist."
+fi
